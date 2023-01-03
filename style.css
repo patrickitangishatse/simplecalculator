@@ -1,65 +1,64 @@
 *{
-  margin: 0;
-  padding:0;
-}
-body{
-  background-color: orange;
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins" sans-serif;
 }
 
-  .calculator-grid {
 
-    background-color: rgba(0, 0, 0, 0.848);
-    /* height: 70%; */
-    /* width: 25%; */
-    margin-left: 35%;
-    margin-right: 35%;
-    margin-top:5%;
-    padding: 5%;
-    border-radius: 50px;
+.container{
+	width: 100%;
+	height: 100vh;
+	background: orange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-    }
+.calculator{
+	background: rgba(0, 0, 0, 0.848);
+	padding: 20px;
+	border-radius: 10px;
+}
 
-    .calculator-grid > button 
-    {
-      width: 60px;
-background-color: transparent;
-color: white;
-border-color: transparent;
-padding: 20px;
-margin: 5px;
-font-size: 30px;
-text-align: center;
-cursor: pointer;
+.calculator form input{
+	border: 0;
+	outline: 0;
+	height: 60px;
+	width: 60px;
+	border-radius: 10px;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	margin: 10px;
+}
 
-    }
+.calculator form input:hover{
+  color:orange;
+  font-size: 30px;
+}
 
-      .calculator-grid > button:hover {
-        color: #a9a9a9;
-      }
+form .display{
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 0;
+} 
 
-      .span-two {
-        grid-column: span 2;
-        color: #adf802;
-        background-color: rgba(139, 0, 139, 0.8);
-      }
 
-      .output{
-        padding: 20px;
-        background-color: transparent;
-        width: 100%;
-        border-color: transparent;
-        color: #fff;
-        text-align: right;
-        font-size: 30px;
-      }
+form .display input{
+	text-align: right;
+	flex: 1;
+	font-size: 45px;
+	box-shadow: none;
 
-      .output .previous-operand{
-        color: orange;
-        font-size: 1.5rem;
-      }
+}
 
-      .output .current-operand{
-        color: white;
-        font-size: 2.5rem;
-      }
+form input.equal{
+	width: 145px;
+}
+
+
+form input.operator{
+	color: orange;
+}
